@@ -227,6 +227,20 @@ nav a:hover, nav a.active { color: var(--accent); opacity: 1; }
   color: var(--accent2); margin-bottom: 8px;
 }
 
+/* ─── ARTICLE IMAGE ─── */
+.article-img-full {
+  max-width: 800px; margin: 32px auto 0; padding: 0 24px;
+}
+.article-img-full img {
+  width: 100%; height: 380px; object-fit: cover;
+  border-radius: 8px; border: 1px solid var(--border);
+}
+.article-img-full .caption {
+  font-family: 'DM Mono', monospace; font-size: 0.72rem;
+  color: var(--muted); margin-top: 10px; text-align: center;
+  display: block;
+}
+
 /* ─── SIMPLE PAGE ─── */
 .page-content {
   max-width: 720px; margin: 0 auto; padding: 56px 24px 80px;
