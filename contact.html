@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — NeuralEdge</title>
+  <meta name="description" content="Get in touch with the NeuralEdge editorial team. We welcome reader questions, story suggestions, and feedback." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <a class="logo" href="index.html">Neural<span>Edge</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="articles.html">Articles</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="page-content">
+    <h1>Contact Us</h1>
+    <p class="subtitle">We'd love to hear from you. Use the form below or email us directly.</p>
+
+    <h2>Get in Touch</h2>
+    <p>Whether you have a question about something you've read, a suggestion for a future article, a correction to report, or a partnership inquiry — we read every message.</p>
+
+    <p>For general editorial questions, write to us at <strong>editorial@neuraledge.com</strong><br/>
+    For advertising and partnerships: <strong>ads@neuraledge.com</strong></p>
+
+    <form class="contact-form" onsubmit="handleSubmit(event)">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject">
+          <option value="general">General Question</option>
+          <option value="story">Story Suggestion</option>
+          <option value="correction">Correction</option>
+          <option value="partnership">Partnership / Advertising</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Your message here..." required></textarea>
+      </div>
+      <button type="submit" class="btn">Send Message →</button>
+      <p id="form-success" style="display:none; color:var(--accent); font-family:'DM Mono',monospace; font-size:0.85rem; margin-top:12px;">✓ Message sent! We'll get back to you soon.</p>
+    </form>
+  </div>
+</main>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a class="logo" href="index.html">Neural<span>Edge</span></a>
+      <p>Independent coverage of artificial intelligence and emerging technology.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Articles</h4>
+      <ul>
+        <li><a href="article-1.html">AI Agents</a></li>
+        <li><a href="article-2.html">LLMs Explained</a></li>
+        <li><a href="articles.html">All Articles</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Site</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 NeuralEdge. All rights reserved.</span>
+    <span><a href="privacy-policy.html">Privacy Policy</a></span>
+  </div>
+</footer>
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  document.getElementById('form-success').style.display = 'block';
+  e.target.reset();
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Large Language Models Explained: From GPT to Gemini — NeuralEdge</title>
+  <meta name="description" content="What are large language models, how do they work, and what makes GPT, Claude, and Gemini different? This in-depth explainer covers everything you need to know." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <a class="logo" href="index.html">Neural<span>Edge</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="articles.html" class="active">Articles</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="article-hero">
+    <span class="cat-tag">Deep Learning</span>
+    <h1>Large Language Models Explained: From GPT to Gemini</h1>
+    <p class="lead">Large language models are reshaping how we interact with computers. But what are they actually doing under the hood? We break it down without the jargon.</p>
+    <div class="article-meta">
+      <span>By NeuralEdge Editorial</span>
+      <span>January 18, 2025</span>
+      <span>8 min read</span>
+    </div>
+  </div>
+  <div class="article-img-placeholder">
+    <div class="caption">Illustration: A simplified view of how a transformer model processes and generates text, one token at a time.</div>
+  </div>
+  <div class="article-body">
+    <p>In 2017, a team of researchers at Google published a paper with a deceptively simple title: "Attention Is All You Need." Inside was a new neural network architecture called the transformer. Few people outside academia paid attention at the time. Today, that paper is the foundation upon which ChatGPT, Gemini, Claude, Llama, and virtually every major AI system has been built.</p>
+
+    <p>Large language models (LLMs) are, at their core, very sophisticated text prediction systems. But that description undersells what they've become: systems that can write essays, generate working code, translate languages, summarize documents, answer complex questions, and hold extended conversations — sometimes better than a human expert.</p>
+
+    <h2>The Basic Idea: Predict the Next Token</h2>
+    <p>The fundamental task an LLM learns during training is simple in concept: given a sequence of text, predict what comes next. Not just the next word — the next "token," which might be a word, part of a word, or a punctuation mark.</p>
+
+    <p>To do this accurately across billions of examples from the internet, books, and other sources, the model must develop an incredibly rich internal representation of language, facts, reasoning patterns, and context. The prediction task, as simple as it sounds, forces the model to learn an enormous amount about the world.</p>
+
+    <div class="callout">
+      <p class="callout-title">What is a Token?</p>
+      <p>Tokens are the units that LLMs process. A token is roughly 3–4 characters on average, so "Artificial Intelligence" might become ["Artif", "icial", " Intel", "ligence"]. Most English words are 1–2 tokens. GPT-4 has a context window that can handle around 128,000 tokens at once.</p>
+    </div>
+
+    <h2>The Transformer Architecture</h2>
+    <p>What made transformers revolutionary was the "attention mechanism." Unlike earlier neural networks that processed text sequentially — one word at a time — transformers look at all words in a sequence simultaneously and figure out which ones are relevant to each other.</p>
+
+    <p>When processing the sentence "The bank on the river was steep," the model needs to understand that "bank" refers to a riverbank, not a financial institution. The attention mechanism allows it to connect "bank" to "river" across the sentence, even if they are far apart. This ability to capture long-range dependencies in text is what makes transformers so powerful.</p>
+
+    <h2>How Training Works</h2>
+    <p>Training an LLM requires massive computational resources. The process involves exposing the model to enormous quantities of text — trillions of tokens, scraped from websites, books, scientific papers, code repositories, and more — and repeatedly adjusting millions (or billions) of numerical parameters to improve prediction accuracy.</p>
+
+    <p>The training of GPT-4 is estimated to have cost somewhere between 50 and 100 million dollars in compute alone. Gemini Ultra and Claude 3 Opus are in similar territory. This barrier to entry is why only a handful of well-funded organizations can train frontier models from scratch.</p>
+
+    <h2>Fine-Tuning and RLHF</h2>
+    <p>Training on raw internet text produces a model that can predict text — but not necessarily one that behaves helpfully or safely in a conversation. That's where fine-tuning comes in.</p>
+
+    <p>After pre-training, models are refined using a technique called Reinforcement Learning from Human Feedback (RLHF). Human trainers rate the model's outputs for helpfulness, accuracy, and safety. These ratings are used to train a "reward model" — a separate system that evaluates outputs. The main LLM is then trained to maximize scores from the reward model, nudging it toward more useful, honest, and safe behavior.</p>
+
+    <blockquote><p>"The magic of large language models isn't that they memorize facts — it's that they learn the patterns and structures of knowledge itself."</p></blockquote>
+
+    <h2>The Major Players: GPT, Gemini, Claude, and Llama</h2>
+    <p>Each of the frontier models has its own character, strengths, and underlying approach:</p>
+
+    <h3>OpenAI's GPT Series</h3>
+    <p>The GPT family popularized large language models for the general public. GPT-3 in 2020 demonstrated emergent capabilities that surprised even its creators. GPT-4, released in 2023, brought multimodal capabilities and significantly improved reasoning. The latest GPT-4o integrates text, image, and voice processing in a unified model.</p>
+
+    <h3>Google's Gemini</h3>
+    <p>Google's Gemini models were designed from the ground up to be natively multimodal — meaning they were trained on text, images, audio, and video simultaneously rather than adding vision as an afterthought. Gemini Ultra matched or exceeded GPT-4 on many benchmarks at launch. Gemini is deeply integrated into Google's product suite, from Search to Workspace.</p>
+
+    <h3>Anthropic's Claude</h3>
+    <p>Claude models, developed by Anthropic, are notable for their constitutional AI training approach — a method designed to make the model more reliably helpful, harmless, and honest. Claude 3 Opus demonstrated strong performance on complex reasoning tasks and is particularly valued for its longer context window and careful, nuanced responses.</p>
+
+    <h3>Meta's Llama</h3>
+    <p>Llama is Meta's open-weight model family. Unlike GPT or Gemini, Llama models are publicly released for researchers and developers to download and run. This has made Llama the backbone of a vast ecosystem of open-source AI applications, fine-tuned models, and research projects.</p>
+
+    <h2>What LLMs Cannot Do</h2>
+    <p>For all their capabilities, LLMs have genuine limitations. They can confidently state incorrect information — a phenomenon called hallucination. They have a knowledge cutoff date and cannot access real-time information without external tools. They struggle with precise mathematical reasoning beyond what their training data has covered. And they can reflect biases present in their training data.</p>
+
+    <p>Understanding these limitations is as important as understanding the capabilities. The most effective users of LLMs are those who know when to trust the output and when to verify it independently.</p>
+
+    <h2>The Road Ahead</h2>
+    <p>LLM development is moving at a remarkable pace. Context windows are growing — from 4,000 tokens in early GPT-3 to 1 million tokens in some current models. Multimodal capabilities are expanding. Models are being made smaller and more efficient, making them viable on consumer hardware. And reasoning capabilities are improving through new techniques like chain-of-thought prompting and test-time compute scaling.</p>
+
+    <p>The large language model is the defining technology of the 2020s. Understanding even the basics of how it works puts you in a far better position to use it effectively, evaluate its outputs critically, and participate meaningfully in the conversation about its impact on society.</p>
+  </div>
+</main>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a class="logo" href="index.html">Neural<span>Edge</span></a>
+      <p>Independent coverage of artificial intelligence and emerging technology.</p>
+    </div>
+    <div class="footer-col">
+      <h4>More Articles</h4>
+      <ul>
+        <li><a href="article-1.html">The Rise of AI Agents</a></li>
+        <li><a href="article-3.html">AI in Healthcare</a></li>
+        <li><a href="article-6.html">Build an AI Chatbot</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Site</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 NeuralEdge. All rights reserved.</span>
+    <span><a href="privacy-policy.html">Privacy Policy</a></span>
+  </div>
+</footer>
+</body>
+</html>
